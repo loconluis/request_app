@@ -1,0 +1,1 @@
+//Archivo de manejo en JavaScript
