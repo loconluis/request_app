@@ -2,7 +2,7 @@
   "name": "requestapp",
   "version": "1.0.0",
   "description": "Using for make real time request ",
-  "main": "server/app.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/loconluis/request_app#readme",
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
     "mongoose": "^4.6.8",
     "socket.io": "^1.5.1"
