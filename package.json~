@@ -1,0 +1,24 @@
+{
+  "name": "requestapp",
+  "version": "1.0.0",
+  "description": "Using for make real time request ",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loconluis/request_app.git"
+  },
+  "author": "loconluis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loconluis/request_app/issues"
+  },
+  "homepage": "https://github.com/loconluis/request_app#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.6.8",
+    "socket.io": "^1.5.1"
+  }
+}
