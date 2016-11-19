@@ -18,8 +18,19 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+app.get('/form', function(req, res){
+    res.render('request');
+});
+
 //Servidor de sockets
-io.sockets.on('connection', function(){
+io.sockets.on('connection', function(socket){
+    //Buscar los datos en la BD
+    socket.on('req-update', function(){
+        Request.find(function(){
+            socket.emit('req-open', docs);
+        });
+    });
+
     console.log('Usuario conectado');
 
 
