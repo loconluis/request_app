@@ -23,12 +23,19 @@ $(function(){
 
     //Mostrar peticion, y agregar a la base de datos
     socket.on('req-push', function(req, user, email){
-        $reqboard.prepend('<div class="col s12 m2 l2"><div class="card-panel grey lighten-4"><span class="white-text">'+req+'</span><br><span>'+user+'</span></div></div>')
+        $reqboard.prepend($('<div class="col s12 m2 l2"><div class="card-panel grey lighten-4"><span class="white-text">'+req+'</span><br><span>'+user+'</span></div></div>'))
     });
 
     //Busquedad en la base de datos
     socket.on('req-open', function(req){
-
+        if(req.length == 0){
+            return;
+        }else{
+            $reqboard.empty();
+            $.each(req, function(key, value){
+                $reqboard.prepend($('<div class="col s12 m2 l2"><div class="card-panel grey lighten-4"><span class="white-text">'+value.message+'</span><br><span>'+value.author+'</span></div></div>'))
+            });
+        }
     });
 
     //Evento del boton de enviar
